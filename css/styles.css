@@ -1,0 +1,169 @@
+/* ==========================
+    Main Elements
+ ========================== */
+
+ body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    margin: 0 15px;
+    
+}
+img {
+    width: 90%;
+    max-width: 300px;
+}
+#intro {
+    margin: 30px 20px;
+}
+ul {
+    padding: 0 0;
+    list-style: none;
+}
+#contact {
+
+    padding: 20px 0;
+}
+
+/* ==========================
+    Header & Navigation
+ ========================== */
+
+ header {
+    background-color:#270473;
+    padding: 8px 0 0 0;
+    margin: 0;
+    
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    padding: 10px 20px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    background-color:white ;
+    color: #270473;
+    text-align: center;
+    padding: 10px 20px;
+}
+.main-nav {
+    padding: 10px 20px;
+
+}
+nav li {
+    margin: 6px 6px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+
+}
+
+a:hover {
+    background-color:darkgrey;
+}
+
+/* ==========================
+    Footer 
+ ========================== */
+footer {
+    background-color: #b093f0;
+    padding-bottom:8px;
+}
+#main-footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 30px 20px;
+    text-decoration: none;
+}
+#footer-name {
+    margin-right: auto;
+}
+#main-footer a {
+    text-decoration: none;
+    color: #270473;
+}
+.footer-button {
+    display: none;
+    margin: 0 15px ;
+}
+#to-top {
+    justify-content: flex-end;
+}
+
+/* ==========================
+    Media Queries 
+ ========================== */
+
+ @media (min-width: 768px) {
+
+    #header-buttons {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+#name {
+        margin-right: auto;
+}
+    nav ul {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin: 30px 20px;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #intro li {
+        width: 50%;
+    }
+    #intro-statement {
+        order: -1;
+        text-align: left;
+    }
+    .portfolio-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+.portfolio-items li {
+    width: 45%;
+}
+#to-top {
+    display: none;
+ }
+
+ .footer-button {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+
+ }
+ @media (min-width: 1024px) {
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+    }
+
+    .portfolio-items li {
+        width: 33%;
+    }
+    #to-top {
+        display: none;
+    }
+ }
+}

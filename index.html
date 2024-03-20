@@ -1,239 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">    
-    <title>Coding Sam</title>
-    <link rel="stylesheet" href="./css/shared.css">
-    <link rel="stylesheet" href="./css/animations.css">
-    <script src="./JS/sharedjs.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins&display=swap">
+    <title>My Responsive Site</title>
 </head>
 <body>
-    <script>
-        document.body.classList.add('fade-out');
-        window.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.remove('fade-out');
-        });
-    </script>
-    <!-- NAV -->
-    <div class="wrap">
-        <div class="menu-container">
-            <ul class="menu">
-                <a href="#home" id="link"><li>HOME</li></a>
-                <a href="#gallery"><li>GALLERY</li></a>
-                <a href="#contact"><li>COMMISSIONS</li></a>
+    <header class="main-header" id="main-heading">
+        <nav class="main-nav">
+            <h1 id="name">Sam Syharath</h1>
+            <ul class="header-buttons">
+                <li><a href="#main-heading">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ul id="intro">
+            <li><img id="profile-pic" src="images/Samson-Syharath.jpg" alt="Cartoon image of designer"></li>
+            <li id="intro-statement">Hi! I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and Tech Academy's Self-paced Game Developer Boot Camp. I'm excited to put my skills to use!</li>
+        </ul>
+        <br>
+        <div id="portfolio">
+            <h2 id="portfolio_header">Portfolio</h2>
+            <ul class="portfolio-items">
+                <li id="marketing">
+                    <img src="images\thumbnail_1_files\drpg_thumbnail.png" alt="Screenshot of 2.5D RPG">
+                    <h3>2.5 D Dungeon RPG</h3>
+                    <p>Created with Godot 4 and C#, 2D player character and enemies engage in a 3D environment. </p>
+                </li>
+                <li id="search">
+                    <img src="images/portfolio-2.png" alt="image of search page">
+                    <h3>Search Page</h3>
+                    <p>This project searches through a specific database to find information that the user is trying to look up.</p>
+                </li>
+                <li id="travel">
+                    <img src="images/portfolio-3.png" alt="image of travel project">
+                    <h3>Travel App</h3>
+                    <p>This project compares travel times based on different transportation methods and tells you the best one.</p>
+                </li>
+                <li id="map">
+                    <img src="images/portfolio-4.png" alt="image of map project">
+                    <h3>Map of Favorite Spots</h3>
+                    <p>This project uses mapping apis to plot pointes for my favorite spots in the city for a do-it-yourself walking tour.</p>
+                </li>
+                <li id="photo">
+                    <img src="images/portfolio-5.png" alt="image of photo diplay">
+                    <h3>Photo Gallery</h3>
+                    <p>This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.</p>
+                </li>
+                <li id="calculator">
+                    <img src="images/portfolio-6.png" alt="image of calculator app">
+                    <h3>Calculator</h3>
+                    <p>Someone can enter in the numbers they want, and press the big blue button and get the result.</p>
+                </li>
             </ul>
         </div>
-    </div>
-    <!-- END NAV -->
-    <article class="all-sections"></article>
-    
-    <!-- HOME -->
-        <div id="home">
-            <div class="container">
-                <div class="text-center">
-                    <div id="dropbox"></div>
-                    <span class="head-main" style="font-size:7vw;">Sam the Coder</span>
-                </div>
-            </div>
+        <br>
+        <div id="skills">
+            <h2>Skills</h2>
+            <img src="images/apolloframe.png" alt="Outline image of designer">
+            <p>During my professional career as a programmer, I have garnered a variety of skills and experience including:</p>
+            <ul id="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>C#</li>
+                <li>C++</li>
+                <li>Unity</li>
+                <li>Unreal Engine 5</li>
+                <li>Godot Engine</li>
+                <li>React</li>
+            </ul>
         </div>
-        <!-- END HOME-->
-        <!-- NEWSLETTER -->
-            <button class="open-button" onclick="openForm()">Sign up for Newsletter</button>
-            
-            <!-- Popup Form -->
-            <div class="form-popup" id="news-Form">
-                <form action="/action_page.php" class="form-container">
-                    <label for="newsname">Name: </label>
-                    <input type="text" placeholder="Enter Name..." name="newsname" required>
-                    <label for="news-email">Email: </label>
-                    <input type="text" placeholder="Email..." name="news-email" required>
-                    <button type="submit" class="btn">Submit</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                    
-                </form>
-            </div>
-            <!-- END Popup Form-->
-        <article class="main-section">
-        <!-- GALLERY -->
-        <section>
-            <div id="slideshow">
-                <script>
-                $("#slideshow > div:gt(0)").hide();
-
-                setInterval(function() {
-                    $('#slideshow > div:first')
-                    .fadeOut(1000)
-                    .next()
-                    .fadeIn(1000)
-                    .end()
-                    .appendTo('#slideshow');
-                }, 3000);
-                </script>
-                <div>
-                  <img src="https://assets.codepen.io/9632/dog.jpg">
-                </div>
-                <div>
-                  <img src="https://assets.codepen.io/9632/plant.jpg">
-                </div>
-                <div>
-                  This is a slideshow.
-                </div>
-             </div>
-            <hr>
-            <div id="gallery">
-                <h1>Gallery</h1>
-                <div class="flex-container">
-
-                    <!-- PHOTO-CONTAINER 1 -->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="/images/Thumb/thumbnail_1.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-
-                    <!-- PHOTO-CONTAINER 2 -->
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="/images/Thumb/thumbnail_2.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 3 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="/images/Thumb/thumbnail_3.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 4 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_4.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 5 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_5.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 6 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_6.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 7 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_7.jpeg" alt="">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 8 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_8.jpeg" alt="Image of dating simulator 1">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-                     <!-- PHOTO-CONTAINER 9 -->
-                     <div class="photo-container">
-                        <div class="photo">
-                            <img class="zoom-image" src="./images/Thumb/thumbnail_9.jpeg" alt="Image of dating simulator 2">
-                            <div class="photo-overlay">
-                                <h3>Click to Enlarge</h3>
-                                <p>We have several game launches coming soon, but check out these <em>recent projects</em>!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PHOTO-CONTAINER -->
-
-
-                </div>
-            </div>
-        </section>
-        <!-- END GALLERY -->
-        </article>
-
-        <article class="main-section">
-        <!-- COMMISSIONS -->
-        <section id="contact">
-            <div class="container">
-                <div class="heading-padding">
-                    <h1 class="heading-padding">Commissions</h1>
-                    <div class="reservation">
-                        <h2><span>Ready for an adventure?</span>
-                            <hr>
-                        <br/>Commission your game now!
-                    </h2>
-                    <p class="rsvp-text">
-                        Please Provide us with your basic contact information.
-                    </p>
-                    <div class="form-rsvp">
-                        <form name="myForm" action="" onsubmit="return validateForm()" method="post">
-                            First Name: <input name="fname" class="rsvp" type="text" value="">
-                            Last Name: <input name="lname" class="rsvp" type="text" value="">
-                            Email: <input name="form-email" class="rsvp" type="text" value="">
-                            Phone Number: <input name="phonenumber" class="rsvp" type="text" value="">
-                            <div class="form-spacer">
-                                <label class="terms">Terms and conditions</label>
-                           
-                                <input type="submit" value="Submit">
-                                
-                            </div>
-                        </form>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END COMMISSION -->
-        </article>
-    </article>
-
-    <!-- END NEWSLETTER -->
-    <!-- FOOTER -->
-    <div>
-        www.apollogayming.com &nbsp;| <a href="https://store.steampowered.com/">Steam</a> &nbsp; |  <time>September 5, 2023</time>
-    </div>
-    <!-- END FOOTER -->
+        <br>
+    </main>   
+    <footer> 
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
+            <p>Phone: +1 (971) 415 0776</p>
+            <p>Email: <a href="mailto:samsyharath@gmail.com">samsyharath@gmail.com</a></p>
+        </div>
+        <hr>
+        <ul id="main-footer">
+            <li id="footer-name">Sam Syharath</li>
+            <li><a class="footer-button" href="#main-heading">Home</a></li>
+            <li><a class="footer-button" href="#portfolio">Portfolio</a></li>
+            <li><a class="footer-button" href="#skills">Skills</a></li>
+            <li><a class="footer-button" href="#contact">Contact</a></li>
+            <li><a id="to-top" href="#top">Back to top</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
